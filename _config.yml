@@ -21,7 +21,7 @@ repository               : "alex-pierron.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile2.jpg"
+  avatar           : "profile.png"
   name             : "Alex Pierron"
   pronouns         : # example: "she/her"  
   bio              : "Final year Mathematics and AI student looking for a PhD thesis"
@@ -33,7 +33,7 @@ author:
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
   googlescholar    : #"https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
-  email            : "alex.pierron(at)universite-paris-saclay.fr"
+  email            : "alex.pierron(at)ik.me"
   impactstory      : # URL
   orcid            : #"http://orcid.org/yourorcidurl"
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
