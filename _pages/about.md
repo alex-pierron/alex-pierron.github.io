@@ -1,15 +1,13 @@
 ---
 permalink: /
 title: "About me"
-excerpt: "About me"
+excerpt: "Alex Pierron"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-About me
-======
 Currently a student in Master II [Mathematics and Artificial Intelligence](https://www.imo.universite-paris-saclay.fr/fr/etudiants/masters/mathematiques-et-applications/m2/m2-mathematique-et-intelligence-artificielle/) at Paris-Saclay University, I'm developing fundamental and practical skills in statistics, probability, optimization, machine learning and deep learning.
 
 I am particularly interested in the field of Reinforcement Learning (single and multi agents) and Online Learning more generally. I am not only motivated by the expansion of knowledge and capacities, I also take interest in the questions linked to AI Safety, both on a technical point of view and an ethical one.
