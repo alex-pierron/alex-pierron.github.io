@@ -17,11 +17,12 @@ In addition to my current degree, I also hold a double bachelor in Mathematics a
 Thanks to my scientific background in physics, I remain very interested and curious in the various discoveries and areas of research in physics, in particular the questions of controlled nuclear fusion for civil use and quantum computing.
 
 On my spare time, I do sports to respect the saying "A healthy mind in a healthy body"! I really appreciate to go hiking or climbing with friends, wether is it indoor or on the outside. 
-I I deeply appreciate the mountain environment for the rusticity it requires and the humility it imposes.
+I deeply appreciate the mountain environment for the rusticity it requires and the humility it imposes.
 
 I intend to continue to progress and gain skills in order to be able to see and do as many things as possible, both professionally and personally!
 
 
 Have a look at my [CV](http://alex-pierron.github.io/files/pierron_cv.pdf) for additional information!
+
 
 Please, do not hesitate to ask me any question by email or by Linkedin.
