@@ -10,7 +10,7 @@ redirect_from:
 
 Currently a student in Master II [Mathematics and Artificial Intelligence](https://www.imo.universite-paris-saclay.fr/fr/etudiants/masters/mathematiques-et-applications/m2/m2-mathematique-et-intelligence-artificielle/) at Paris-Saclay University, I'm developing fundamental and practical skills in statistics, probability, optimization, machine learning and deep learning.
 
-I am particularly interested in the fields of Reinforcement Learning (single and multi-agent), Online Learning and Computer Vision.\\ I wish to study technically the possibilities that can arise through the future use of quantum computing for these very high resources demanding fields. \\
+I am particularly interested in the fields of Reinforcement Learning (single and multi-agent), Online Learning and Computer Vision.\\ I wish to study and develop technically the possibilities that could arise through the use of quantum computing for these very high resources demanding fields. \\
  I am not only motivated by the expansion of knowledge and capacities, I also take interest in the questions linked to AI Safety, both on a technical point of view and an ethical one. \\
 I am very interested to do a PhD in one of those topics and I am actively looking for such an opportunity !
 
