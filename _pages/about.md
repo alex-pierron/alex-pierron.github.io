@@ -8,25 +8,16 @@ redirect_from:
   - /about.html
 ---
 
-Currently a PhD student at [IP Paris](https://www.ip-paris.fr/en), I am focusing on the security of Reinforcement Learning (RL) models for Beyond 5G (B5G) networks at the [SAMOVAR](https://samovar.telecom-sudparis.eu/index.php/en/accueil-2/) lab.  
-My PhD is part of the [PEPR Future Networks](https://pepr-futurenetworks.fr/en/the-pepr/) initiative, a strategic program aimed at advancing research and development in 5G and Beyond 5G technologies.  
-This program brings together academic institutions, research labs, and industry partners to foster innovation and address the technical, security, and ethical challenges associated with next-generation mobile networks.
+I am a PhD student at [IP Paris](https://www.ip-paris.fr/en), focusing on the security of Reinforcement Learning (RL) models for Beyond 5G (B5G) networks within the [SAMOVAR](https://samovar.telecom-sudparis.eu/index.php/en/accueil-2/) lab. My research is part of the [PEPR Future Networks](https://pepr-futurenetworks.fr/en/the-pepr/) initiative, a strategic program dedicated to advancing research and development in 5G and B5G technologies.
 
-I hold a Master degree in [Mathematics and Artificial Intelligence](https://www.imo.universite-paris-saclay.fr/fr/etudiants/masters/mathematiques-et-applications/m2/m2-mathematique-et-intelligence-artificielle/) from Paris-Saclay University, where I developed fundamental and practical skills in statistics, probability, optimization, machine learning, and deep learning.
+I am focused on Reinforcement Learning and Multi-Agent Reinforcement Learning with my background in physics fuelling my curiosity about how quantum computing could revolutionize these computationally demanding fields.  
+I am motivated not only by the pursuit of expanding knowledge and technological capabilities but also by a deep commitment to AI safety, from both technical and ethical perspectives. I enjoy working at the intersection of fundamental and applied research, aiming to bridge the gap between theoretical innovations and their practical applications.
 
-I am particularly interested in the fields of Reinforcement Learning, Multi-Agent Reinforcement Learning and Online Learning. I am intrigued by the possibilities that quantum computing could bring to these resource-intensive fields. My motivation is driven not only by the expansion of knowledge and capabilities but also by a deep interest in AI Safety from both technical and ethical perspectives.  
-I appreciate working at the edge between fundamental and applied research, bridging the gap between theoretical advancements and practical applications.
+I hold a Master’s degree in [Mathematics and Artificial Intelligence](https://www.imo.universite-paris-saclay.fr/fr/etudiants/masters/mathematiques-et-applications/m2/m2-mathematique-et-intelligence-artificielle/) from Paris-Saclay University, where I developed a strong foundation in statistics, probability, optimization, machine learning, and deep learning.
 
-In addition to my Master's degree, I also hold a double bachelor's degree in Mathematics and Physics from the University of Paris-Saclay. Notably, the third-year physics courses in this program are shared with the prestigious ENS Paris-Saclay and the "Magistère de Physique fondamentale," which are among the most rigorous physics curricula in France.
+Additionally, I hold a double Bachelor’s degree in Mathematics and Physics from the University of Paris-Saclay. The third-year physics courses of this program were shared with the prestigious ENS Paris-Saclay and the "Magistère de Physique Fondamentale," known for being among the most rigorous physics curricula in France. My background in physics continues to drive my interest in cutting-edge research areas such as quantum computing and controlled nuclear fusion for civilian use.
 
-Thanks to my strong background in physics, I remain interested and curious about various discoveries and research areas in the field, particularly in quantum computing and controlled nuclear fusion for civil use.
 
-Have a look at my [CV](http://alex-pierron.github.io/files/pierron_cv.pdf) for additional information!
-
-On my spare time, I do sports to respect the saying "A healthy mind in a healthy body"! I really appreciate to go hiking or climbing with friends, wether is it indoor or on the outside. 
-I deeply appreciate the mountain environment for the rusticity it requires and the humility it imposes.
-
-I intend to continue to progress and gain skills in order to be able to see and do as many things as possible, both professionally and personally!
-
+Have a look at my [CV](http://alex-pierron.github.io/files/pierron_cv.pdf) for additional informations!
 
 Please, do not hesitate to ask me any question by email or by Linkedin.
