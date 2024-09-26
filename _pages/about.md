@@ -15,7 +15,8 @@ I am motivated not only by the pursuit of expanding knowledge and technological 
 
 I hold a Master’s degree in [Mathematics and Artificial Intelligence](https://www.imo.universite-paris-saclay.fr/fr/etudiants/masters/mathematiques-et-applications/m2/m2-mathematique-et-intelligence-artificielle/) from Paris-Saclay University, where I developed a strong foundation in statistics, probability, optimization, machine learning, and deep learning.
 
-Additionally, I hold a double Bachelor’s degree in Mathematics and Physics from the University of Paris-Saclay. The third-year physics courses of this program were shared with the prestigious ENS Paris-Saclay and the "Magistère de Physique Fondamentale," known for being among the most rigorous physics curricula in France. My background in physics continues to drive my interest in cutting-edge research areas such as quantum computing and controlled nuclear fusion for civilian use.
+Additionally, I hold a double Bachelor’s degree in Mathematics and Fundamental Physics from the University of Paris-Saclay, known for being among the most rigorous mathematics and physics curricula in France. 
+My background in physics continues to drive my interest in cutting-edge research areas such as quantum computing and controlled nuclear fusion for civilian use.
 
 
 Have a look at my [CV](http://alex-pierron.github.io/files/pierron_cv.pdf) for additional informations!
