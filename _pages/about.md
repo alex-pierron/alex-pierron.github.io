@@ -19,6 +19,6 @@ Additionally, I hold a double Bachelor’s degree in Mathematics and Fundamental
 My background in physics continues to drive my interest in cutting-edge research areas such as quantum computing and controlled nuclear fusion for civilian use.
 
 
-Have a look at my [CV](http://alex-pierron.github.io/files/pierron_cv.pdf) for additional informations!
+Have a look at my [CV](http://alex-pierron.github.io/files/CV_PIERRON_English.pdf) for additional informations!
 
 Please, do not hesitate to ask me any question by email or by Linkedin.
