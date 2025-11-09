@@ -15,7 +15,7 @@ My thesis is part of the [PEPR Future Networks](https://pepr-futurenetworks.fr/e
 
 ## 🔬 Research Interests  
 
-I work on Reinforcement Learning (RL) and Multi-Agent Reinforcement Learning (MARL) applied to physical systems, with a heavyfocus on Physical AI.  
+I work on Reinforcement Learning (RL) and Multi-Agent Reinforcement Learning (MARL) applied to physical systems, with a heavy focus on Physical AI.  
 My main motivation lies in understanding and improving the safety, robustness, and reliability of RL methods, both from a technical and a conceptual standpoint.  
 
 I particularly enjoy bridging the gap between theory and practice. I like tackling fundamental research questions that remain meaningful for applied use cases, far from the perfect world of toy examples.  
