@@ -1,7 +1,7 @@
 ---
 permalink: /
-title: "👋 About me"
-excerpt: "👋 About me"
+title: "About me"
+excerpt: "About me"
 author_profile: true
 redirect_from: 
   - /about/
@@ -11,7 +11,7 @@ redirect_from:
 I am a PhD student in Mathematics and Artificial Intelligence at [IP Paris](https://www.ip-paris.fr/en), within the [SAMOVAR](https://samovar.telecom-sudparis.eu/index.php/en/accueil-2/) laboratory.  
 My research focuses on the security of Reinforcement Learning (RL) models for Beyond 5G (B5G) and 6G networks.  
 
-My thesis is part of the [PEPR Future Networks](https://pepr-futurenetworks.fr/en/the-pepr/) program, a French strategic and large-scale research initiative under [France 2030](https://www.info.gouv.fr/grand-dossier/france-2030-en), dedicated to advancing next-generation communication technologies.  
+My thesis is part of the [PEPR Future Networks](https://pepr-futurenetworks.fr/en/the-pepr/) program, a French strategic and large-scale research initiative under [France 2030](https://www.info.gouv.fr/grand-dossier/france-2030-en), dedicated to advancing next-generations communication technologies.  
 
 ## 🔬 Research Interests  
 
