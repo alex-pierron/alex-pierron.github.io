@@ -1,25 +1,18 @@
 {
-  "name": "academic-pages",
-  "version": "0.8.1.1",
-  "description": "Academic Pages Mistakes Jekyll theme npm build scripts",
+  "name": "alex-pierron-github-io",
+  "version": "1.0.0",
+  "description": "JavaScript build for Alex Pierron's personal academic website",
   "repository": {
     "type": "git",
-    "url": "https://github.com/academicpages/academicpages.github.io"
+    "url": "https://github.com/alex-pierron/alex-pierron.github.io"
   },
   "keywords": [
     "jekyll",
     "theme",
     "minimal"
   ],
-  "contributors": [
-    "Michael Rose",
-    "Robert Zupko"
-  ],
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/academicpages/academicpages.github.io/issues"
-  },
-  "homepage": "https://github.com/academicpages/academicpages.github.io",
+  "homepage": "https://alex-pierron.github.io",
   "engines": {
     "node": ">= 0.10.0"
   },
