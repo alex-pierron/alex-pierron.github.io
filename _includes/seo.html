@@ -4,10 +4,13 @@
 {% if site.url %}
   {% assign seo_url = site.url | append: site.baseurl %}
 {% endif %}
-{% assign seo_url = seo_url | default: site.github.url %}
 
 {% if page.title %}
-  {% assign seo_title = page.title | append: " " | append: site.title_separator | append: " " | append: site.title %}
+  {% if page.url == "/" %}
+    {% assign seo_title = page.title %}
+  {% else %}
+    {% assign seo_title = page.title | append: " " | append: site.title_separator | append: " " | append: site.title %}
+  {% endif %}
 {% endif %}
 
 {% if seo_title %}
@@ -23,6 +26,11 @@
 {% assign seo_description = page.description | default: page.excerpt | default: site.description %}
 {% if seo_description %}
   {% assign seo_description = seo_description | markdownify | strip_html | strip_newlines | escape_once %}
+  <meta name="description" content="{{ seo_description }}">
+{% endif %}
+
+{% if page.robots %}
+  <meta name="robots" content="{{ page.robots }}">
 {% endif %}
 
 {% assign seo_author = page.author | default: page.author[0] | default: site.author[0] %}
@@ -48,7 +56,7 @@
   <meta property="og:url" content="{{ page.url | prepend: seo_url | replace: "/index.html", "/" }}">
 {% endif %}
 
-{% if page.excerpt %}
+{% if seo_description %}
   <meta property="og:description" content="{{ seo_description }}">
 {% endif %}
 
@@ -87,11 +95,15 @@
   <meta property="og:image" content="{% if page.header.image contains "://" %}{{ page.header.image }}{% else %}{{ page.header.image | prepend: "/images/" | prepend: base_path }}{% endif %}">
 {% elsif page.header.overlay_image %}
   <meta property="og:image" content="{% if page.header.overlay_image contains "://" %}{{ page.header.overlay_image }}{% else %}{{ page.header.overlay_image | prepend: "/images/" | prepend: base_path }}{% endif %}">
+{% elsif site.og_image %}
+  <meta property="og:image" content="{{ site.og_image | prepend: "/images/" | prepend: seo_url }}">
 {% endif %}
 
 {% if page.date %}
   <meta property="og:type" content="article">
   <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+{% else %}
+  <meta property="og:type" content="website">
 {% endif %}
 
 {% if paginator.previous_page %}
@@ -101,25 +113,28 @@
   <link rel="next" href="{{ paginator.next_page_path | prepend: seo_url }}">
 {% endif %}
 
-{% if site.og_image %}
-  <script type="application/ld+json">
-    {
-      "@context": "http://schema.org",
-      "@type": "Organization",
-      "url": {{ seo_url | jsonify }},
-      "logo": {{ site.og_image | prepend: "/images/" | prepend: base_path | jsonify }}
-    }
-  </script>
-{% endif %}
-
 {% if site.social %}
   <script type="application/ld+json">
     {
-      "@context" : "http://schema.org",
-      "@type" : "{% if site.social.type %}{{ site.social.type }}{% else %}Person{% endif %}",
-      "name" : "{{ site.social.name | default: site.name }}",
-      "url" : {{ seo_url | jsonify }},
-      "sameAs" : {{ site.social.links | jsonify }}
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": {{ site.social.name | default: site.name | jsonify }},
+      "url": {{ seo_url | jsonify }},
+      "image": {{ site.og_image | prepend: "/images/" | prepend: seo_url | jsonify }},
+      "jobTitle": {{ site.social.job_title | jsonify }},
+      "affiliation": [
+        {
+          "@type": "Organization",
+          "name": "Institut Polytechnique de Paris",
+          "url": "https://www.ip-paris.fr/en"
+        },
+        {
+          "@type": "Organization",
+          "name": "SAMOVAR laboratory",
+          "url": "https://samovar.telecom-sudparis.eu/"
+        }
+      ],
+      "sameAs": {{ site.social.links | jsonify }}
     }
   </script>
 {% endif %}
