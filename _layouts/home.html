@@ -1,0 +1,106 @@
+---
+layout: default
+---
+
+{% include base_path %}
+
+<main class="alex-home" id="main" role="main">
+  <section class="home-intro" aria-labelledby="home-title">
+    <div class="home-intro__copy">
+      <p class="home-eyebrow">PhD Candidate in Artificial Intelligence</p>
+      <h1 id="home-title">Alex Pierron</h1>
+      <p class="home-lede">Safe reinforcement learning for critical cyber-physical systems.</p>
+      <p>
+        I am a PhD candidate in Mathematics and Artificial Intelligence at Institut Polytechnique de Paris, within the SAMOVAR laboratory. My research focuses on Physical AI, reinforcement learning and the security of B5G and 6G physical-layer systems.
+      </p>
+      <p>
+        I study how mono-agent and multi-agent RL methods can remain efficient, robust and trustworthy when they act on critical physical systems. My background in mathematics and fundamental physics shapes how I connect models, algorithms and deployment constraints.
+      </p>
+
+      <ul class="tag-list home-focus" aria-label="Research focus">
+        <li>Physical AI</li>
+        <li>Reinforcement Learning</li>
+        <li>Multi-Agent RL</li>
+        <li>Cyber-Physical Security</li>
+        <li>B5G/6G</li>
+      </ul>
+
+      <nav class="home-contact-links" aria-label="Contact links">
+        <a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener">
+          <i class="fab fa-github" aria-hidden="true"></i>
+          <span>GitHub</span>
+        </a>
+        <a href="mailto:alex.pierron@ip-paris.fr">
+          <i class="fas fa-envelope" aria-hidden="true"></i>
+          <span>Mail</span>
+        </a>
+        <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}" target="_blank" rel="noopener">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+          <span>LinkedIn</span>
+        </a>
+        <a href="{{ '/files/CV_PIERRON.pdf' | relative_url }}" target="_blank" rel="noopener">
+          <i class="fas fa-file-alt" aria-hidden="true"></i>
+          <span>CV</span>
+        </a>
+      </nav>
+    </div>
+
+    <aside class="home-profile-card" aria-label="Profile summary">
+      <img src="{{ '/images/Profile4.png' | relative_url }}" alt="Alex Pierron">
+      <div>
+        <strong>AI Researcher</strong>
+        <span>IP Paris / SAMOVAR</span>
+        <span>Palaiseau, France</span>
+      </div>
+    </aside>
+  </section>
+
+  <section class="home-grid" aria-label="Resume and publications">
+    <div class="home-column" id="resume">
+      <header class="section-heading">
+        <p class="home-eyebrow">Resume</p>
+        <h2>Academic Path</h2>
+      </header>
+
+      <div class="timeline" aria-label="Education">
+        {% for item in site.data.resume.education %}
+          {% include resume-card.html item=item %}
+        {% endfor %}
+      </div>
+
+      <header class="section-heading section-heading--secondary">
+        <h2>Experience</h2>
+      </header>
+      <div class="timeline" aria-label="Experience">
+        {% for item in site.data.resume.experience %}
+          {% include resume-card.html item=item %}
+        {% endfor %}
+      </div>
+
+      {% if site.data.resume.skills %}
+        <div class="skills-strip" aria-label="Technical skills">
+          {% for skill in site.data.resume.skills %}
+            <span>{{ skill }}</span>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="home-column" id="publications">
+      <header class="section-heading">
+        <p class="home-eyebrow">Publications</p>
+        <h2>Selected Work</h2>
+      </header>
+
+      <div class="publication-list publication-list--home">
+        {% for publication in site.data.publications %}
+          {% include publication-card.html publication=publication %}
+        {% endfor %}
+      </div>
+
+      <a class="text-link" href="{{ '/publications/' | relative_url }}">Open the full publications page</a>
+    </div>
+  </section>
+</main>
+
+{{ content }}

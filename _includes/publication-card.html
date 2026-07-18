@@ -1,0 +1,39 @@
+{% assign publication = include.publication %}
+
+<article class="publication-card">
+  <div class="publication-card__meta">
+    <span>{{ publication.type }}</span>
+    <span>{{ publication.date }}</span>
+    {% if publication.location %}
+      <span>{{ publication.location }}</span>
+    {% endif %}
+  </div>
+
+  <h3>{{ publication.title }}</h3>
+  <p class="publication-card__authors">{{ publication.authors | join: ", " }}</p>
+  <p class="publication-card__venue">{{ publication.venue }}</p>
+  {% if publication.details %}
+    <p class="publication-card__details">{{ publication.details }}</p>
+  {% endif %}
+  {% if publication.award %}
+    <p class="publication-card__award"><i class="fas fa-award" aria-hidden="true"></i>{{ publication.award }}</p>
+  {% endif %}
+
+  <p class="publication-card__abstract">{{ publication.abstract }}</p>
+
+  {% if publication.keywords %}
+    <ul class="tag-list publication-card__keywords" aria-label="Official keywords">
+      {% for keyword in publication.keywords %}
+        <li>{{ keyword }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% if publication.links %}
+    <div class="publication-card__links" aria-label="Publication links">
+      {% for link in publication.links %}
+        <a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
+      {% endfor %}
+    </div>
+  {% endif %}
+</article>

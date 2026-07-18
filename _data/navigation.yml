@@ -1,1 +1,5 @@
-main: []
+main:
+  - title: "Resume"
+    url: "/#resume"
+  - title: "Publications"
+    url: "/#publications"
