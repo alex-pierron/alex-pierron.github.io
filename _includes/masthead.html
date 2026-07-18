@@ -6,18 +6,36 @@
       <nav id="site-nav" class="greedy-nav">
         <button><div class="navicon"></div></button>
         <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg"><a href="{{ base_path }}/">{{ site.title }}</a></li>
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></li>
           {% for link in site.data.navigation.main %}
             {% if link.url contains 'http' %}
-              {% assign domain = '' %}
+              {% assign link_url = link.url %}
               {% else %}
-              {% assign domain = base_path %}
+              {% assign link_url = link.url | relative_url %}
             {% endif %}
-            <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
+            <li class="masthead__menu-item"><a href="{{ link_url }}">{{ link.title }}</a></li>
           {% endfor %}
         </ul>
         <ul class="hidden-links hidden"></ul>
       </nav>
     </div>
+    <nav class="masthead__social-links" aria-label="Profile links">
+      <a class="masthead__social-link" href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener" title="GitHub">
+        <i class="fab fa-github" aria-hidden="true"></i>
+        <span class="screen-reader-text">GitHub</span>
+      </a>
+      <a class="masthead__social-link" href="mailto:alex.pierron(at)ip-paris(dot)fr" title="Mail">
+        <i class="fas fa-envelope" aria-hidden="true"></i>
+        <span class="screen-reader-text">Mail</span>
+      </a>
+      <a class="masthead__social-link" href="https://www.linkedin.com/in/{{ site.author.linkedin }}" target="_blank" rel="noopener" title="LinkedIn">
+        <i class="fab fa-linkedin" aria-hidden="true"></i>
+        <span class="screen-reader-text">LinkedIn</span>
+      </a>
+      <a class="masthead__social-link" href="{{ '/files/CV_PIERRON.pdf' | relative_url }}" target="_blank" rel="noopener" title="CV">
+        <i class="fas fa-file-alt" aria-hidden="true"></i>
+        <span class="screen-reader-text">CV</span>
+      </a>
+    </nav>
   </div>
 </div>

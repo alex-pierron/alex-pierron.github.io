@@ -1,11 +1,8 @@
 ---
-layout: archive
+layout: publications
 title: "Publications"
 permalink: /publications/
-author_profile: true
-sitemap: false
-robots: noindex,follow
-description: "Publications by Alex Pierron will be added here."
+author_profile: false
+sitemap: true
+description: "Peer-reviewed publications by Alex Pierron on reinforcement learning, Physical AI, autonomous air combat and physical-layer security."
 ---
-
-My publications will be added here as the site is expanded.
