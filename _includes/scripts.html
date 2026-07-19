@@ -1,1 +1,4 @@
-<script src="{{ base_path }}/assets/js/main.min.js"></script>
+<script src="{{ '/assets/js/main.min.js' | relative_url }}"></script>
+{% if page.interactive_visuals %}
+<script src="{{ '/assets/js/skills-constellation.js' | relative_url }}" defer></script>
+{% endif %}

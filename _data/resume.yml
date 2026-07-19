@@ -3,7 +3,7 @@ education:
     institution: "Institut Polytechnique de Paris / SAMOVAR Laboratory"
     link: "https://www.ip-paris.fr/en"
     dates: "Oct. 2024 to Sept. 2027"
-    location: "Palaiseau, France"
+    location: "Palaiseau, Paris Region, France"
     logos:
       - src: "/images/logos/ip-paris.png"
         alt: "Institut Polytechnique de Paris"
@@ -21,7 +21,7 @@ education:
     institution: "Paris-Saclay University"
     link: "https://www.universite-paris-saclay.fr/en"
     dates: "Sept. 2022 to Sept. 2024"
-    location: "Paris, France"
+    location: "Orsay, Paris Region, France"
     logos:
       - src: "/images/logos/paris-saclay.svg"
         alt: "Paris-Saclay University"
@@ -36,7 +36,7 @@ education:
     institution: "Paris-Saclay University"
     link: "https://www.universite-paris-saclay.fr/en"
     dates: "Sept. 2019 to Aug. 2022"
-    location: "Paris, France"
+    location: "Orsay, Paris Region, France"
     logos:
       - src: "/images/logos/paris-saclay.svg"
         alt: "Paris-Saclay University"
@@ -48,11 +48,11 @@ education:
       - "Signal Processing"
 
 experience:
-  - title: "AI Researcher in Reinforcement Learning, Intern"
+  - title: "AI Researcher in Multi-Agent Reinforcement Learning, Intern"
     organization: "Dassault Aviation"
     link: "https://www.dassault-aviation.com/en/"
     dates: "Apr. 2024 to Sept. 2024"
-    location: "Saint-Cloud, France"
+    location: "Saint-Cloud, Paris Region, France"
     logo_text: "Dassault Aviation"
     description: "Worked on AI for collaborative air combat through multi-agent reinforcement learning, including literature review and realistic Python/C++ environments for tactical scenarios."
     tags:
@@ -65,12 +65,12 @@ experience:
     organization: "CNRS / Signals and Systems Laboratory"
     link: "https://l2s.centralesupelec.fr/en/"
     dates: "Mar. 2023 to Jul. 2023"
-    location: "Gif-sur-Yvette, France"
+    location: "Gif-sur-Yvette, Paris Region, France"
     logos:
       - src: "/images/logos/cnrs.png"
         alt: "CNRS"
     logo_text: "L2S"
-    description: "Studied few-shot learning methods for image classification on small geological texture datasets, with PyTorch implementations and experimental comparison."
+    description: "Studied Few-Shot Learning methods for image classification on limited geological texture datasets, with PyTorch implementations and experimental comparison."
     tags:
       - "Few-Shot Learning"
       - "Meta-Learning"
@@ -81,7 +81,7 @@ experience:
     organization: "CNRS / IJCLab"
     link: "https://www.ijclab.in2p3.fr/en/"
     dates: "Oct. 2020 to Jan. 2021"
-    location: "Orsay, France"
+    location: "Orsay, Paris Region, France"
     logos:
       - src: "/images/logos/cnrs.png"
         alt: "CNRS"
@@ -93,14 +93,103 @@ experience:
       - "Instrumentation"
       - "Python"
 
+# Technical Stack layout: all coordinates use the 0-100 SVG/map scale.
+# Adjust a skill's x/y to move its medallion; level settings control its ring and label.
+technical_stack:
+  center_x: 50
+  center_y: 52
+  guides:
+    - end_x: 50
+      end_y: 7
+    - end_x: 91
+      end_y: 55
+    - end_x: 22
+      end_y: 84
+  levels:
+    - id: "expert"
+      label: "Expert"
+      radius: 22
+      label_x: 66
+      label_y: 37
+    - id: "advanced"
+      label: "Advanced"
+      radius: 35
+      label_x: 24
+      label_y: 76
+    - id: "intermediate"
+      label: "Intermediate"
+      radius: 45
+      label_x: 42
+      label_y: 97
+
 skills:
-  - "Python"
-  - "PyTorch"
-  - "JAX"
-  - "C++/CUDA"
-  - "NumPy"
-  - "Scikit-Learn"
-  - "Slurm"
-  - "Git"
-  - "LaTeX"
-  - "Typst"
+  - name: "Python"
+    id: "python"
+    level: "Expert"
+    icon: "/images/skills/python.svg"
+    x: 50
+    y: 30
+    description: "Rapid prototyping, simulation and scientific workflows."
+  - name: "C++ / CUDA"
+    id: "cpp-cuda"
+    level: "Advanced"
+    icon: "/images/skills/cpp-cuda.svg"
+    x: 85
+    y: 52
+    description: "High-performance environment components and accelerated computation."
+  - name: "NumPy"
+    id: "numpy"
+    level: "Expert"
+    icon: "/images/skills/numpy.svg"
+    x: 31
+    y: 62
+    description: "Numerical modelling, data handling and simulation."
+  - name: "PyTorch"
+    id: "pytorch"
+    level: "Expert"
+    icon: "/images/skills/pytorch.svg"
+    x: 69
+    y: 62
+    description: "Deep learning experiments and reinforcement learning agents."
+  - name: "JAX"
+    id: "jax"
+    level: "Intermediate"
+    icon: "/images/skills/jax.svg"
+    x: 72
+    y: 13
+    description: "Differentiable programming for high-performance ML research."
+  - name: "Scikit-Learn"
+    id: "scikit-learn"
+    level: "Advanced"
+    icon: "/images/skills/scikit-learn.svg"
+    x: 68
+    y: 82
+    description: "Baselines, evaluation pipelines and classical machine learning."
+  - name: "Slurm"
+    id: "slurm"
+    level: "Intermediate"
+    icon: "/images/skills/slurm.svg"
+    x: 90
+    y: 72
+    description: "Scheduling and running experiments on shared compute infrastructure."
+  - name: "Git"
+    id: "git"
+    level: "Advanced"
+    icon: "/images/skills/git.svg"
+    x: 25
+    y: 27
+    description: "Versioned research code and collaborative workflows."
+  - name: "LaTeX"
+    id: "latex"
+    level: "Advanced"
+    icon: "/images/skills/latex.svg"
+    x: 15
+    y: 52
+    description: "Scientific writing and publication-ready documents."
+  - name: "Typst"
+    id: "typst"
+    level: "Intermediate"
+    icon: "/images/skills/typst.svg"
+    x: 20
+    y: 86
+    description: "Modern technical typesetting and reproducible documents."
