@@ -125,7 +125,7 @@ $alex-surface-soft: #f6f9fb;
   grid-template-columns: minmax(0, 1fr) minmax(220px, 300px);
   gap: 2.5rem;
   align-items: center;
-  min-height: 650px;
+  min-height: 430px;
   padding: 0.4rem 0 2.3rem;
 }
 
@@ -278,17 +278,59 @@ $alex-surface-soft: #f6f9fb;
   }
 }
 
-.home-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 1.8rem;
-  align-items: start;
-  padding-top: 0.2rem;
+.home-latest {
+  max-width: 860px;
+  padding-top: 1.3rem;
+  border-top: 1px solid $alex-line;
+  animation: alex-fade-up 0.5s ease 0.12s;
 }
 
-.home-column {
-  min-width: 0;
-  animation: alex-fade-up 0.5s ease 0.12s;
+.news-list {
+  display: grid;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid $alex-line;
+}
+
+.news-item {
+  display: grid;
+  grid-template-columns: 7rem minmax(0, 1fr);
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid $alex-line;
+
+  time {
+    color: $alex-blue;
+    font-size: 0.72rem;
+    font-weight: 750;
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+    text-transform: uppercase;
+  }
+
+  p {
+    margin: 0;
+    color: $alex-ink;
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
+
+  a {
+    display: inline-flex;
+    margin-top: 0.25rem;
+    color: $alex-blue;
+    font-size: 0.75rem;
+    font-weight: 750;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: $alex-blue-dark;
+      text-decoration: underline;
+    }
+  }
 }
 
 .section-heading {
@@ -305,10 +347,6 @@ $alex-surface-soft: #f6f9fb;
     line-height: 1.15;
     letter-spacing: 0;
   }
-}
-
-.section-heading--secondary {
-  margin-top: 1.45rem;
 }
 
 .timeline {
@@ -457,27 +495,6 @@ $alex-surface-soft: #f6f9fb;
   color: $alex-ink;
   font-size: 0.79rem;
   line-height: 1.55;
-}
-
-.skills-strip {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.42rem;
-  margin-top: 1.15rem;
-
-  span {
-    display: inline-flex;
-    align-items: center;
-    min-height: 1.7rem;
-    padding: 0.25rem 0.5rem;
-    border: 1px solid $alex-line;
-    border-radius: 999px;
-    color: $alex-muted;
-    background: $alex-surface;
-    font-size: 0.68rem;
-    font-weight: 650;
-    line-height: 1.2;
-  }
 }
 
 .publication-list {
@@ -631,6 +648,538 @@ $alex-surface-soft: #f6f9fb;
   padding: 1.15rem;
 }
 
+.publication-card--compact {
+  padding: 1rem;
+
+  .publication-card__links {
+    margin-top: 0.7rem;
+  }
+}
+
+.resume-page {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+  color: $alex-ink;
+}
+
+#main.resume-page {
+  opacity: 1;
+  -webkit-animation: none;
+          animation: none;
+}
+
+.resume-page__header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  max-width: 800px;
+  margin-bottom: 3rem;
+
+  h1 {
+    margin: 0.2rem 0 0.55rem;
+    color: $alex-blue;
+    font-size: 2.35rem;
+    line-height: 1.1;
+    letter-spacing: 0;
+  }
+
+  p:last-child {
+    max-width: 620px;
+    margin: 0;
+    color: $alex-muted;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+.resume-page__cv {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 2.5rem;
+  padding: 0.5rem 0.78rem;
+  border: 1px solid $alex-line;
+  border-radius: 999px;
+  color: $alex-blue-dark;
+  background: $alex-surface;
+  font-size: 0.78rem;
+  font-weight: 750;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: color 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+
+  i {
+    color: $alex-blue;
+  }
+
+  &:hover,
+  &:focus {
+    color: $alex-blue;
+    border-color: mix(#000, $alex-line, 22%);
+    box-shadow: 0 0.5rem 1.1rem rgba(0, 80, 144, 0.08);
+    transform: translateY(-1px);
+  }
+}
+
+.resume-section {
+  max-width: 800px;
+  margin-top: 3.25rem;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+}
+
+.resume-section--featured {
+  max-width: 900px;
+}
+
+.timeline--resume {
+  gap: 1rem;
+  padding-left: 1.65rem;
+
+  &::before {
+    top: 0.7rem;
+    bottom: 0.7rem;
+    left: 0.34rem;
+    width: 2px;
+    background: linear-gradient(180deg, rgba(0, 80, 144, 0.08), rgba(0, 80, 144, 0.58) 18%, rgba(0, 80, 144, 0.38) 82%, rgba(0, 80, 144, 0.08));
+  }
+
+  .resume-card {
+    padding: 1.1rem;
+  }
+
+  .resume-card::before {
+    top: 1.35rem;
+    left: -1.84rem;
+    width: 0.68rem;
+    height: 0.68rem;
+    border-width: 3px;
+    box-shadow: 0 0 0 1px rgba(0, 80, 144, 0.28), 0 0 0.8rem rgba(0, 80, 144, 0.12);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+  }
+
+  .resume-card:hover::before {
+    box-shadow: 0 0 0 1px rgba(0, 80, 144, 0.4), 0 0 1rem rgba(0, 80, 144, 0.2);
+    transform: scale(1.12);
+  }
+}
+
+.timeline--experience {
+  padding-right: 1.65rem;
+  padding-left: 0;
+
+  &::before {
+    right: 0.34rem;
+    left: auto;
+    background: linear-gradient(180deg, rgba(0, 58, 102, 0.08), rgba(0, 58, 102, 0.62) 18%, rgba(0, 80, 144, 0.4) 82%, rgba(0, 58, 102, 0.08));
+  }
+
+  .resume-card::before {
+    right: -1.84rem;
+    left: auto;
+  }
+}
+
+.home-research {
+  max-width: 1020px;
+  margin-top: 3.2rem;
+  padding-top: 1.3rem;
+  border-top: 1px solid $alex-line;
+}
+
+.resume-section--skills {
+  max-width: 1020px;
+}
+
+.interactive-constellation {
+  padding: 1.15rem;
+  border: 1px solid $alex-line;
+  border-radius: 8px;
+  background: linear-gradient(145deg, $alex-surface 0%, $alex-surface-soft 100%);
+  box-shadow: 0 0.75rem 1.8rem rgba(35, 49, 61, 0.055);
+}
+
+.interactive-constellation__description {
+  max-width: 620px;
+  margin: 0 0 1rem;
+  color: $alex-muted;
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+.interactive-constellation__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(220px, 0.55fr);
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.interactive-constellation__map {
+  position: relative;
+  min-height: 36rem;
+  overflow: hidden;
+  border: 1px solid rgba(0, 80, 144, 0.14);
+  border-radius: 6px;
+  background:
+    radial-gradient(circle at 50% 52%, rgba(0, 80, 144, 0.13) 0, rgba(0, 80, 144, 0.05) 18%, transparent 48%),
+    linear-gradient(145deg, rgba(232, 242, 248, 0.72), rgba(255, 255, 255, 0.9));
+}
+
+.interactive-constellation__lines {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.interactive-constellation__star {
+  fill: $alex-blue;
+  opacity: 0.28;
+  animation: alex-star-pulse 4.8s ease-in-out infinite;
+}
+
+.interactive-constellation__star--two,
+.interactive-constellation__star--five {
+  animation-delay: -1.6s;
+}
+
+.interactive-constellation__star--three,
+.interactive-constellation__star--six {
+  animation-delay: -3.1s;
+}
+
+.interactive-constellation__core {
+  position: absolute;
+  top: var(--y, 52%);
+  left: var(--x, 50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.08rem;
+  width: 7.35rem;
+  height: 7.35rem;
+  border: 1px solid rgba(0, 80, 144, 0.34);
+  border-radius: 50%;
+  color: $alex-surface;
+  background: radial-gradient(circle at 35% 30%, $alex-blue, $alex-blue-dark 72%);
+  box-shadow: 0 0 0 0.55rem rgba(0, 80, 144, 0.055), 0 0.9rem 1.8rem rgba(0, 58, 102, 0.18);
+  line-height: 1.1;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  animation: alex-core-breathe 6s ease-in-out infinite;
+
+  span {
+    margin: 0;
+    font-size: 0.68rem;
+    font-weight: 650;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  strong {
+    margin: 0;
+    font-size: 1.02rem;
+  }
+}
+
+.interactive-constellation__node {
+  position: absolute;
+  top: var(--y);
+  left: var(--x);
+  z-index: 3;
+  color: $alex-blue-dark;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 0.4rem 0.9rem rgba(35, 49, 61, 0.08);
+  cursor: pointer;
+  font: inherit;
+  transform: translate(-50%, -50%);
+  transition: color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
+
+  &:hover,
+  &:focus-visible,
+  &.is-active {
+    z-index: 5;
+    border-color: $alex-blue;
+    background: $alex-blue-soft;
+    box-shadow: 0 0 0 0.25rem rgba(0, 80, 144, 0.08), 0 0.75rem 1.3rem rgba(0, 80, 144, 0.15);
+    outline: none;
+    transform: translate(-50%, -50%) scale(1.07);
+  }
+}
+
+.interactive-constellation__detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 15rem;
+  padding: 1.2rem;
+  border: 1px solid $alex-line;
+  border-radius: 6px;
+  background: $alex-surface;
+  box-shadow: 0 0.45rem 1rem rgba(35, 49, 61, 0.045);
+
+  h3 {
+    margin: 0.25rem 0 0.65rem;
+    color: $alex-blue-dark;
+    font-size: 1.12rem;
+    line-height: 1.25;
+    letter-spacing: 0;
+  }
+
+  p {
+    margin: 0;
+    color: $alex-ink;
+    font-size: 0.8rem;
+    line-height: 1.6;
+  }
+}
+
+.interactive-constellation__detail-eyebrow {
+  color: $alex-blue !important;
+  font-size: 0.66rem !important;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.interactive-constellation__detail-hint {
+  margin-top: 1rem !important;
+  color: $alex-muted !important;
+  font-size: 0.68rem !important;
+}
+
+.interactive-constellation__mobile {
+  display: none;
+}
+
+.interactive-constellation__mobile-nodes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.interactive-constellation__mobile-node {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 2rem;
+  padding: 0.32rem 0.56rem;
+  border: 1px solid $alex-line;
+  border-radius: 999px;
+  color: $alex-blue-dark;
+  background: $alex-surface;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.2;
+  transition: color 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+
+  img {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  &:hover,
+  &:focus-visible,
+  &.is-active {
+    border-color: $alex-blue;
+    color: $alex-blue-dark;
+    background: $alex-blue-soft;
+    outline: none;
+  }
+}
+
+.research-constellation__link {
+  stroke: rgba(0, 80, 144, 0.2);
+  stroke-dasharray: 1.2 1.8;
+  stroke-width: 0.28;
+  transition: opacity 0.22s ease, stroke 0.22s ease, stroke-width 0.22s ease;
+}
+
+.research-constellation__node {
+  max-width: 8.5rem;
+  padding: 0.42rem 0.6rem;
+  border: 1px solid $alex-line;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 750;
+  line-height: 1.2;
+}
+
+.research-constellation__label {
+  position: absolute;
+  z-index: 2;
+  padding: 0.3rem 0.46rem;
+  border: 1px solid rgba(0, 80, 144, 0.14);
+  border-radius: 999px;
+  color: $alex-muted;
+  background: rgba(255, 255, 255, 0.76);
+  box-shadow: 0 0.2rem 0.46rem rgba(35, 49, 61, 0.045);
+  font-size: 0.57rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  pointer-events: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
+}
+
+.research-constellation__label--center {
+  --label-offset: -50%;
+}
+
+.research-constellation__label--start {
+  --label-offset: 0;
+}
+
+.research-constellation__label--end {
+  --label-offset: -100%;
+}
+
+.research-constellation__label {
+  transform: translateX(var(--label-offset, 0));
+}
+
+.technical-orbits {
+  min-height: 36rem;
+  background:
+    radial-gradient(circle at 50% 52%, rgba(0, 80, 144, 0.14) 0, rgba(0, 80, 144, 0.04) 30%, transparent 56%),
+    linear-gradient(145deg, rgba(232, 242, 248, 0.72), rgba(255, 255, 255, 0.9));
+}
+
+.technical-orbits__ring {
+  fill: none;
+  stroke: rgba(0, 80, 144, 0.21);
+  stroke-width: 0.28;
+  stroke-dasharray: 1.2 1.4;
+  transition: opacity 0.22s ease, stroke 0.22s ease, stroke-width 0.22s ease;
+}
+
+.technical-orbits__guide {
+  fill: none;
+  stroke: rgba(0, 58, 102, 0.14);
+  stroke-width: 0.22;
+  stroke-dasharray: 0.8 2.2;
+}
+
+.technical-orbits__node {
+  display: grid;
+  grid-template-rows: 2rem auto;
+  place-items: center;
+  width: 4.75rem;
+  min-height: 4.75rem;
+  padding: 0.34rem;
+  border: 1px solid $alex-line;
+  border-radius: 50%;
+  font-size: 0.55rem;
+  font-weight: 750;
+  line-height: 1.05;
+  text-align: center;
+
+  img {
+    width: 1.85rem;
+    height: 1.85rem;
+  }
+
+  span {
+    max-width: 4rem;
+  }
+}
+
+.technical-orbits__label {
+  position: absolute;
+  top: var(--y);
+  left: var(--x);
+  z-index: 4;
+  padding: 0.28rem 0.46rem;
+  border: 1px solid rgba(0, 80, 144, 0.18);
+  border-radius: 999px;
+  color: $alex-muted;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 0.22rem 0.48rem rgba(35, 49, 61, 0.05);
+  font-size: 0.56rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  pointer-events: none;
+  text-transform: uppercase;
+  transform: translate(-50%, -50%);
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
+}
+
+.interactive-constellation[data-active-node] {
+  .interactive-constellation__node:not(.is-active) {
+    opacity: 0.34;
+  }
+
+  .research-constellation__link,
+  .technical-orbits__ring {
+    opacity: 0.11;
+  }
+
+  .technical-orbits__label {
+    opacity: 0.26;
+  }
+
+  .research-constellation__label {
+    opacity: 0.24;
+  }
+}
+
+.interactive-constellation--research[data-active-context="machine-learning-reinforcement-learning"] .research-constellation__link[data-context="machine-learning-reinforcement-learning"],
+.interactive-constellation--research[data-active-context="physics-quantum-systems"] .research-constellation__link[data-context="physics-quantum-systems"],
+.interactive-constellation--research[data-active-context="physical-ai-autonomous-systems"] .research-constellation__link[data-context="physical-ai-autonomous-systems"] {
+  opacity: 0.88;
+  stroke: $alex-blue;
+  stroke-width: 0.46;
+}
+
+.interactive-constellation--research[data-active-context="machine-learning-reinforcement-learning"] .research-constellation__node[data-context="machine-learning-reinforcement-learning"],
+.interactive-constellation--research[data-active-context="physics-quantum-systems"] .research-constellation__node[data-context="physics-quantum-systems"],
+.interactive-constellation--research[data-active-context="physical-ai-autonomous-systems"] .research-constellation__node[data-context="physical-ai-autonomous-systems"] {
+  opacity: 0.78;
+}
+
+.interactive-constellation--research[data-active-context="machine-learning-reinforcement-learning"] .research-constellation__label[data-context="machine-learning-reinforcement-learning"],
+.interactive-constellation--research[data-active-context="physics-quantum-systems"] .research-constellation__label[data-context="physics-quantum-systems"],
+.interactive-constellation--research[data-active-context="physical-ai-autonomous-systems"] .research-constellation__label[data-context="physical-ai-autonomous-systems"] {
+  opacity: 1;
+  border-color: rgba(0, 80, 144, 0.42);
+  color: $alex-blue-dark;
+  background: $alex-blue-soft;
+  box-shadow: 0 0 0 0.2rem rgba(0, 80, 144, 0.07), 0 0.55rem 1rem rgba(0, 80, 144, 0.12);
+  transform: translate(var(--label-offset, 0), -2px) scale(1.04);
+}
+
+.interactive-constellation--orbits[data-active-context="expert"] .technical-orbits__ring[data-context="expert"],
+.interactive-constellation--orbits[data-active-context="advanced"] .technical-orbits__ring[data-context="advanced"],
+.interactive-constellation--orbits[data-active-context="intermediate"] .technical-orbits__ring[data-context="intermediate"] {
+  opacity: 0.92;
+  stroke: $alex-blue;
+  stroke-width: 0.48;
+}
+
+.interactive-constellation--orbits[data-active-context="expert"] .technical-orbits__label[data-context="expert"],
+.interactive-constellation--orbits[data-active-context="advanced"] .technical-orbits__label[data-context="advanced"],
+.interactive-constellation--orbits[data-active-context="intermediate"] .technical-orbits__label[data-context="intermediate"] {
+  opacity: 1;
+  border-color: rgba(0, 80, 144, 0.42);
+  color: $alex-blue-dark;
+  background: $alex-blue-soft;
+  box-shadow: 0 0 0 0.2rem rgba(0, 80, 144, 0.07), 0 0.55rem 1rem rgba(0, 80, 144, 0.12);
+  transform: translate(-50%, calc(-50% - 2px)) scale(1.06);
+}
+
 @keyframes alex-fade-up {
   from {
     transform: translateY(8px);
@@ -641,9 +1190,32 @@ $alex-surface-soft: #f6f9fb;
   }
 }
 
+@keyframes alex-star-pulse {
+  0%,
+  100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.65;
+    transform: scale(1.35);
+  }
+}
+
+@keyframes alex-core-breathe {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0.55rem rgba(0, 80, 144, 0.055), 0 0.9rem 1.8rem rgba(0, 58, 102, 0.18);
+  }
+
+  50% {
+    box-shadow: 0 0 0 0.8rem rgba(0, 80, 144, 0.07), 0 1rem 2rem rgba(0, 58, 102, 0.22);
+  }
+}
+
 @media (max-width: $medium-wide) {
-  .home-intro,
-  .home-grid {
+  .home-intro {
     grid-template-columns: 1fr;
   }
 
@@ -659,7 +1231,8 @@ $alex-surface-soft: #f6f9fb;
 
 @media (max-width: $medium) {
   .alex-home,
-  .publications-page {
+  .publications-page,
+  .resume-page {
     padding: 1.35rem 0.9rem 2.4rem;
   }
 
@@ -688,6 +1261,12 @@ $alex-surface-soft: #f6f9fb;
     font-size: 2.35rem;
   }
 
+  .resume-page__header {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 2.3rem;
+  }
+
   .resume-card__topline {
     display: grid;
     gap: 0.65rem;
@@ -704,6 +1283,30 @@ $alex-surface-soft: #f6f9fb;
   .resume-card__logos img {
     max-width: 96px;
     max-height: 30px;
+  }
+
+  .timeline--experience {
+    padding-right: 0;
+    padding-left: 1.65rem;
+
+    &::before {
+      right: auto;
+      left: 0.34rem;
+      background: linear-gradient(180deg, rgba(0, 80, 144, 0.08), rgba(0, 80, 144, 0.58) 18%, rgba(0, 80, 144, 0.38) 82%, rgba(0, 80, 144, 0.08));
+    }
+
+    .resume-card::before {
+      right: auto;
+      left: -1.84rem;
+    }
+  }
+
+  .interactive-constellation__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .interactive-constellation__detail {
+    min-height: 0;
   }
 }
 
@@ -728,24 +1331,82 @@ $alex-surface-soft: #f6f9fb;
   .publication-card h3 {
     font-size: 0.95rem;
   }
+
+  .news-item {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+
+  .resume-section {
+    margin-top: 2.45rem;
+  }
+
+  .interactive-constellation {
+    padding: 0.9rem;
+    background: $alex-surface;
+  }
+
+  .interactive-constellation__layout {
+    display: block;
+  }
+
+  .interactive-constellation__map {
+    display: none;
+  }
+
+  .interactive-constellation__mobile {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1.1rem;
+
+    h3 {
+      margin: 0 0 0.45rem;
+      color: $alex-blue-dark;
+      font-size: 0.78rem;
+      line-height: 1.25;
+    }
+  }
+
+  .interactive-constellation__detail {
+    min-height: 0;
+    padding: 1rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .home-intro__copy,
   .home-profile-card,
-  .home-column {
+  .home-latest {
     animation: none;
   }
 
   .masthead__social-link,
   .home-contact-links a,
   .resume-card,
-  .publication-card {
+  .publication-card,
+  .resume-page__cv {
     transition: none;
 
     &:hover,
     &:focus {
       transform: none;
     }
+  }
+
+  .interactive-constellation__star,
+  .interactive-constellation__core {
+    animation: none;
+  }
+
+  .interactive-constellation__node,
+  .interactive-constellation__mobile-node,
+  .research-constellation__link,
+  .technical-orbits__ring,
+  .technical-orbits__label {
+    transition: none;
+  }
+
+  .research-constellation__label {
+    transition: none;
   }
 }

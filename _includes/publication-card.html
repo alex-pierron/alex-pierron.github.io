@@ -1,6 +1,6 @@
 {% assign publication = include.publication %}
 
-<article class="publication-card">
+<article class="publication-card{% if include.compact %} publication-card--compact{% endif %}">
   <div class="publication-card__meta">
     <span>{{ publication.type }}</span>
     <span>{{ publication.date }}</span>
@@ -19,15 +19,17 @@
     <p class="publication-card__award"><i class="fas fa-award" aria-hidden="true"></i>{{ publication.award }}</p>
   {% endif %}
 
-  <p class="publication-card__abstract">{{ publication.abstract }}</p>
+  {% unless include.compact %}
+    <p class="publication-card__abstract">{{ publication.abstract }}</p>
 
-  {% if publication.keywords %}
-    <ul class="tag-list publication-card__keywords" aria-label="Official keywords">
-      {% for keyword in publication.keywords %}
-        <li>{{ keyword }}</li>
-      {% endfor %}
-    </ul>
-  {% endif %}
+    {% if publication.keywords %}
+      <ul class="tag-list publication-card__keywords" aria-label="Official keywords">
+        {% for keyword in publication.keywords %}
+          <li>{{ keyword }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endunless %}
 
   {% if publication.links %}
     <div class="publication-card__links" aria-label="Publication links">

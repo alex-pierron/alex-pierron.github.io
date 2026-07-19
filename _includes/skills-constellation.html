@@ -1,0 +1,64 @@
+{% assign skills = include.skills %}
+{% assign stack = include.stack %}
+{% assign levels = stack.levels %}
+
+<div class="interactive-constellation interactive-constellation--orbits" data-interactive-constellation data-default-context="Technical stack" data-default-title="Explore the technical stack" data-default-description="Hover, focus or select a tool to reveal how it supports my research practice.">
+  <p class="interactive-constellation__description">The rings are a concise view of the tools that support my research workflow.</p>
+
+  <div class="interactive-constellation__layout">
+    <div class="interactive-constellation__map technical-orbits" aria-label="Interactive technical stack with three expertise levels">
+      <svg class="interactive-constellation__lines" viewBox="0 0 100 100" aria-hidden="true">
+        {% for level in levels %}
+          <circle class="technical-orbits__ring" data-context="{{ level.id }}" cx="{{ stack.center_x }}" cy="{{ stack.center_y }}" r="{{ level.radius }}"></circle>
+        {% endfor %}
+        {% for guide in stack.guides %}
+          <line class="technical-orbits__guide" x1="{{ stack.center_x }}" y1="{{ stack.center_y }}" x2="{{ guide.end_x }}" y2="{{ guide.end_y }}"></line>
+        {% endfor %}
+        <circle class="interactive-constellation__star interactive-constellation__star--one" cx="10" cy="23" r="0.48"></circle>
+        <circle class="interactive-constellation__star interactive-constellation__star--two" cx="16" cy="94" r="0.34"></circle>
+        <circle class="interactive-constellation__star interactive-constellation__star--three" cx="84" cy="13" r="0.42"></circle>
+        <circle class="interactive-constellation__star interactive-constellation__star--four" cx="95" cy="82" r="0.46"></circle>
+      </svg>
+
+      <div class="interactive-constellation__core" aria-hidden="true" style="--x: {{ stack.center_x }}%; --y: {{ stack.center_y }}%;">
+        <span>Research</span>
+        <strong>Stack</strong>
+      </div>
+
+      {% for skill in skills %}
+        <button class="interactive-constellation__node technical-orbits__node" type="button" data-constellation-node data-node="{{ skill.id }}" data-context="{{ skill.level | slugify }}" data-context-name="{{ skill.level }}" data-node-name="{{ skill.name }}" data-node-description="{{ skill.description | escape }}" aria-controls="skills-constellation-detail" aria-pressed="false" style="--x: {{ skill.x }}%; --y: {{ skill.y }}%;">
+          <img src="{{ skill.icon | relative_url }}" alt="{{ skill.name }} logo">
+          <span aria-hidden="true">{{ skill.name }}</span>
+        </button>
+      {% endfor %}
+
+      {% for level in levels %}
+        <span class="technical-orbits__label" data-context="{{ level.id }}" style="--x: {{ level.label_x }}%; --y: {{ level.label_y }}%;">{{ level.label }}</span>
+      {% endfor %}
+    </div>
+
+    <aside class="interactive-constellation__detail" id="skills-constellation-detail" data-constellation-detail aria-live="polite">
+      <p class="interactive-constellation__detail-eyebrow" data-constellation-detail-context>Technical stack</p>
+      <h3 data-constellation-detail-title>Explore the technical stack</h3>
+      <p data-constellation-detail-description>Hover, focus or select a tool to reveal how it supports my research practice.</p>
+      <p class="interactive-constellation__detail-hint">Click or tap a tool to keep it in focus.</p>
+    </aside>
+  </div>
+
+  <div class="interactive-constellation__mobile" aria-label="Technical stack by expertise level">
+    {% for level in levels %}
+      <section>
+        <h3>{{ level.label }}</h3>
+        <div class="interactive-constellation__mobile-nodes">
+          {% assign level_skills = skills | where: "level", level.label %}
+          {% for skill in level_skills %}
+            <button class="interactive-constellation__mobile-node interactive-constellation__mobile-node--icon" type="button" data-constellation-node data-node="{{ skill.id }}" data-context="{{ skill.level | slugify }}" data-context-name="{{ skill.level }}" data-node-name="{{ skill.name }}" data-node-description="{{ skill.description | escape }}" aria-controls="skills-constellation-detail" aria-pressed="false">
+              <img src="{{ skill.icon | relative_url }}" alt="">
+              <span>{{ skill.name }}</span>
+            </button>
+          {% endfor %}
+        </div>
+      </section>
+    {% endfor %}
+  </div>
+</div>

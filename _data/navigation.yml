@@ -1,5 +1,5 @@
 main:
   - title: "Resume"
-    url: "/#resume"
+    url: "/resume/"
   - title: "Publications"
-    url: "/#publications"
+    url: "/publications/"

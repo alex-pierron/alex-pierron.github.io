@@ -1,0 +1,101 @@
+# Research Landscape positions use the 0-100 map scale.
+# Edit each topic's x/y to move it, and label_x/label_y/label_align to place its cluster label.
+clusters:
+  - id: "machine-learning-reinforcement-learning"
+    name: "Machine Learning & Reinforcement Learning"
+    label: "Machine Learning & Reinforcement Learning"
+    label_x: 50
+    label_y: 5
+    label_align: "center"
+    topics:
+      - id: "reinforcement-learning"
+        name: "Reinforcement Learning"
+        x: 28
+        y: 22
+        description: "Learning policies for sequential decisions under uncertainty."
+      - id: "multi-agent-reinforcement-learning"
+        name: "Multi-Agent RL"
+        x: 47
+        y: 14
+        description: "Coordinated decision-making among multiple interacting agents."
+      - id: "safe-reinforcement-learning"
+        name: "Safe RL"
+        x: 72
+        y: 19
+        description: "Embedding constraints, risk and trust into control policies."
+      - id: "deep-reinforcement-learning"
+        name: "Deep RL"
+        x: 17
+        y: 32
+        description: "Combining representation learning with sequential decisions."
+      - id: "sequential-decision-making"
+        name: "Sequential Decision-Making"
+        x: 79
+        y: 32
+        description: "Optimisation in dynamic systems with feedback and uncertainty."
+
+  - id: "physics-quantum-systems"
+    name: "Physics & Quantum Systems"
+    label: "Physics & Quantum"
+    label_x: 4
+    label_y: 40
+    label_align: "start"
+    topics:
+      - id: "electromagnetism"
+        name: "Electromagnetism"
+        x: 12
+        y: 54
+        description: "Physical foundations of wave propagation and communication."
+      - id: "quantum-mechanics"
+        name: "Quantum Mechanics"
+        x: 20
+        y: 70
+        description: "A mathematical lens on states, dynamics and measurement."
+      - id: "quantum-computing"
+        name: "Quantum Computing"
+        x: 38
+        y: 81
+        description: "Computational models built on quantum principles."
+      - id: "wave-propagation"
+        name: "Wave Propagation"
+        x: 13
+        y: 92
+        description: "How signals interact with structured physical environments."
+      - id: "signal-processing"
+        name: "Signal Processing"
+        x: 38
+        y: 94
+        description: "Modelling, estimating and interpreting physical signals."
+
+  - id: "physical-ai-autonomous-systems"
+    name: "Physical AI & Autonomous Systems"
+    label: "Physical AI & Autonomy"
+    label_x: 96
+    label_y: 40
+    label_align: "end"
+    topics:
+      - id: "physical-ai"
+        name: "Physical AI"
+        x: 87
+        y: 53
+        description: "Intelligence grounded in the dynamics of real-world systems."
+      - id: "autonomous-systems"
+        name: "Autonomous Systems"
+        x: 85
+        y: 68
+        description: "Systems that perceive, plan and act in their environments."
+      - id: "cyber-physical-systems"
+        name: "Cyber-Physical Systems"
+        x: 69
+        y: 80
+        description: "Reliable decisions across coupled computational and physical processes."
+      - id: "embodied-intelligence"
+        name: "Embodied Intelligence"
+        x: 90
+        y: 89
+        description: "Interaction between algorithms, sensors, actuators and environments."
+      - id: "sim-to-real"
+        name: "Sim-to-Real"
+        x: 59
+        y: 93
+        description: "Transferring policies from simulation to physical systems."
