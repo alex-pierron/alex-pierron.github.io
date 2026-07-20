@@ -38,17 +38,6 @@ $(document).ready(function(){
     });
   }
 
-  $(".mail-link").on("click", function(event) {
-    event.preventDefault();
-
-    var user = this.getAttribute("data-mail-user"),
-      domain = this.getAttribute("data-mail-domain");
-
-    if (user && domain) {
-      window.location.href = ["mail", "to:", user, String.fromCharCode(64), domain].join("");
-    }
-  });
-
   // Sticky footer
   var bumpIt = function() {
       $("body").css("margin-bottom", $(".page__footer").outerHeight(true));
