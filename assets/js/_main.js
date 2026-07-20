@@ -3,6 +3,52 @@
    ========================================================================== */
 
 $(document).ready(function(){
+  // Theme toggle
+  var themeToggle = document.querySelector("[data-theme-toggle]");
+
+  if (themeToggle) {
+    var themeIcon = themeToggle.querySelector("[data-theme-icon]"),
+      themeLabel = themeToggle.querySelector("[data-theme-label]"),
+      themeColor = document.querySelector('meta[name="theme-color"]'),
+      applyTheme = function(theme) {
+        var isNight = theme === "dark";
+
+        document.documentElement.setAttribute("data-theme", isNight ? "dark" : "light");
+        themeToggle.setAttribute("aria-pressed", isNight ? "true" : "false");
+        themeToggle.setAttribute("aria-label", isNight ? "Switch to light mode" : "Enable night mode");
+        themeToggle.setAttribute("title", isNight ? "Switch to light mode" : "Enable night mode");
+        themeLabel.textContent = isNight ? "Switch to light mode" : "Enable night mode";
+        themeIcon.classList.toggle("fa-moon", !isNight);
+        themeIcon.classList.toggle("fa-sun", isNight);
+
+        if (themeColor) {
+          themeColor.setAttribute("content", isNight ? "#0d1b2a" : "#ffffff");
+        }
+      };
+
+    applyTheme(document.documentElement.getAttribute("data-theme") || "light");
+
+    themeToggle.addEventListener("click", function() {
+      var nextTheme = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+
+      applyTheme(nextTheme);
+      try {
+        window.localStorage.setItem("alex-theme", nextTheme);
+      } catch (error) {}
+    });
+  }
+
+  $(".mail-link").on("click", function(event) {
+    event.preventDefault();
+
+    var user = this.getAttribute("data-mail-user"),
+      domain = this.getAttribute("data-mail-domain");
+
+    if (user && domain) {
+      window.location.href = ["mail", "to:", user, String.fromCharCode(64), domain].join("");
+    }
+  });
+
   // Sticky footer
   var bumpIt = function() {
       $("body").css("margin-bottom", $(".page__footer").outerHeight(true));

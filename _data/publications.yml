@@ -1,0 +1,62 @@
+- title: "A Survey of Reinforcement Learning for Autonomous Air Combat: Current Progresses and Limitations"
+  type: "Conference paper"
+  authors:
+    - "Alex Pierron"
+    - "Thibault Lahire"
+  venue: "Proceedings of the 25th International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2026)"
+  details: "International Foundation for Autonomous Agents and Multiagent Systems"
+  date: "May 25-29, 2026"
+  location: "Paphos, Cyprus"
+  doi: "10.65109/GEMF4800"
+  links:
+    - label: "DOI"
+      url: "https://doi.org/10.65109/GEMF4800"
+    - label: "PDF"
+      url: "https://www.ifaamas.org/Proceedings/aamas2026/pdfs/GEMF4800.pdf"
+    - label: "Proceedings"
+      url: "https://www.ifaamas.org/Proceedings/aamas2026/forms/contents.htm"
+  keywords:
+    - "Deep Learning"
+    - "Reinforcement Learning"
+    - "Multi-Agent Reinforcement Learning"
+    - "Survey"
+    - "Autonomous Air Combat"
+    - "Artificial Intelligence"
+  abstract: >-
+    Autonomous air combat represents one of the most demanding challenges in artificial intelligence, requiring agents to operate under uncertainty, partial observability, and adversarial dynamics. Reinforcement Learning and Multi-Agent Reinforcement Learning have recently emerged as promising approaches for enabling adaptive decision-making and coordination in this domain. This survey provides a structured overview of Reinforcement Learning-powered autonomous air combat, with emphasis on open-source environments, algorithmic frameworks, and hierarchical control architectures. We systematically compare three aspects: (1) single-agent and multi-agent settings, (2) full-control and hierarchical abstractions, and (3) the treatment of sensors and observability. Furthermore, we analyze the reproducibility of recent contributions, highlighting the tension between fidelity and accessibility across open and closed-source platforms. Beyond a methodological review, we identify persistent challenges related to scalability, transfer to real-world platforms, non symmetrical scenarios robustness, and computational requirements. By consolidating these advances and limitations, this survey aims to clarify the current state of the field, highlight open problems, and outline pathways toward more robust, scalable, and operationally relevant autonomous collaboration in future air combat systems.
+
+- title: "A Fairness-Aware Strategy for B5G Physical-Layer Security Leveraging Reconfigurable Intelligent Surfaces"
+  type: "Conference paper"
+  authors:
+    - "Alex Pierron"
+    - "Michel Barbeau"
+    - "Luca De Cicco"
+    - "Jose Rubio-Hernan"
+    - "Joaquin Garcia-Alfaro"
+  venue: "Foundations and Practice of Security - 18th International Symposium, FPS 2025, Revised Selected Papers"
+  details: "Lecture Notes in Computer Science, vol. 16403, pp. 83-101, Springer, 2026"
+  date: "Nov. 25-27, 2025"
+  location: "Brest, France"
+  award: "Best Paper Award"
+  doi: "10.1007/978-3-032-20026-6_5"
+  links:
+    - label: "DOI"
+      url: "https://doi.org/10.1007/978-3-032-20026-6_5"
+    - label: "arXiv"
+      url: "https://arxiv.org/abs/2506.06344"
+    - label: "Springer"
+      url: "https://link.springer.com/chapter/10.1007/978-3-032-20026-6_5"
+    - label: "IP Paris"
+      url: "https://researchportal.ip-paris.fr/en/organisations/samovar/"
+  keywords:
+    - "B5G"
+    - "Reconfigurable Intelligent Surface"
+    - "Physical-layer Security"
+    - "Fairness"
+    - "User Equipment"
+    - "Eavesdropping"
+    - "Machine Learning"
+    - "Reinforcement Learning"
+    - "Deep Reinforcement Learning"
+  abstract: >-
+    Reconfigurable Intelligent Surfaces are composed of physical elements that can dynamically alter electromagnetic wave properties to enhance beamforming and lead to improvements in areas with low coverage properties. When combined with Reinforcement Learning techniques, they have the potential to enhance both system behavior and physical-layer security hardening. In addition to security improvements, it is crucial to consider the concept of fair communication. Reconfigurable Intelligent Surfaces must ensure that User Equipment units receive their signals with adequate strength, without other units being deprived of service due to insufficient power. In this paper, we address such a problem. We explore the fairness properties of previous work and propose a novel method that aims at obtaining both an efficient and fair duplex Reconfigurable Intelligent Surface-Reinforcement Learning system for multiple legitimate User Equipment units without reducing the level of achieved physical-layer security hardening. In terms of contributions, we uncover a fairness imbalance of a previous physical-layer security hardening solution, validate our findings and report experimental work via simulation results. We also provide an alternative reward strategy to solve the uncovered problems and release both code and datasets to foster further research in the topics of this paper.

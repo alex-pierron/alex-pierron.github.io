@@ -1,0 +1,98 @@
+---
+layout: default
+---
+
+{% include base_path %}
+
+<main class="alex-home" id="main" role="main">
+  <section class="home-intro" aria-labelledby="home-title">
+    <div class="home-intro__copy">
+      <h1 id="home-title">About me</h1>
+      <p>
+        <p> I am a PhD candidate in Mathematics and Artificial Intelligence at <a href="https://www.ip-paris.fr/" target="_blank" rel="noopener noreferrer"> Institut Polytechnique de Paris </a> within <a href="https://samovar.telecom-sudparis.eu/" target="_blank" rel="noopener noreferrer"> SAMOVAR laboratory</a> under the supervision of <a href="https://scn.telecom-sudparis.eu/joaquin/" target="_blank" rel="noopener noreferrer"> Joaquin Garcia-Alfaro</a>. 
+        My research lies at the intersection of Physical AI, Reinforcement Learning, and the Physical-Layer Security of next-generation 6G communication networks.</br>
+        My thesis is part of the <a href="https://pepr-futurenetworks.fr/en/home/" target="_blank" rel="noopener noreferrer"> PEPR Future Networks </a> program, a French strategic and large-scale research initiative under <a href="https://www.info.gouv.fr/grand-dossier/france-2030-en" target="_blank" rel="noopener noreferrer"> France 2030 </a>, dedicated to advancing next-generation communication technologies. </p></p>
+
+
+        </p>My background in mathematics and physics shapes the way I approach research, connecting theoretical models, learning algorithms, and real-world deployment constraints.</br> 
+        I am particularly interested in developing intelligent systems that remain efficient, robust, and trustworthy when deployed for critical Cyber-Physical Systems in realistic physical environments.<p> 
+
+      <p>I enjoy learning across disciplines and sharing what I discover along the way. I believe that some of the most valuable advances in AI emerge from building meaningful connections between different fields ! Alongside my academic work, I also explore software engineering through personal projects.</p>
+      
+      <p> Feel free to reach out ! I am always happy to discuss research, collaborations, or simply exchange ideas. </p>
+      </p>
+
+      <ul class="tag-list home-focus" aria-label="Research focus">
+        <li>Physical AI</li>
+        <li>Reinforcement Learning</li>
+        <li>Multi-Agent RL</li>
+        <li>Autonomous Systems</li>
+        <li>Critical Cyber-Physical Systems</li>
+        <li>Physical Layer Security</li>
+        <li>6G Networks</li>
+      </ul>
+
+      <nav class="home-contact-links" aria-label="Contact links">
+        <a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener">
+          <i class="fab fa-github" aria-hidden="true"></i>
+          <span>GitHub</span>
+        </a>
+        <a class="mail-link" href="#" data-mail-user="alex.pierron" data-mail-domain="ip-paris.fr" aria-label="Contact by email" title="alex.pierron (at) ip-paris.fr">
+          <i class="fas fa-envelope" aria-hidden="true"></i>
+          <span>Mail</span>
+        </a>
+        <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}" target="_blank" rel="noopener">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+          <span>LinkedIn</span>
+        </a>
+        <a href="{{ '/files/CV_PIERRON.pdf' | relative_url }}" target="_blank" rel="noopener">
+          <i class="fas fa-file-alt" aria-hidden="true"></i>
+          <span>CV</span>
+        </a>
+      </nav>
+    </div>
+
+    <aside class="home-profile-card" aria-label="Profile summary">
+      <img src="{{ '/images/Profile4.png' | relative_url }}" alt="Alex Pierron">
+      <div>
+        <strong>AI Researcher</strong>
+        <span>IP Paris / SAMOVAR</span>
+        <span>Palaiseau, Paris Region, France</span>
+      </div>
+    </aside>
+  </section>
+
+  <section class="home-latest" aria-labelledby="latest-title">
+    <header class="section-heading">
+      <div>
+        <h2 id="latest-title">Latest News</h2>
+      </div>
+      <a class="text-link" href="{{ '/publications/' | relative_url }}">View publications</a>
+    </header>
+
+    <ol class="news-list">
+      {% for item in site.data.news %}
+        <li class="news-item">
+          <time datetime="{{ item.date }}">{{ item.label }}</time>
+          <div>
+            <p>{{ item.text }}</p>
+            {% if item.url %}
+              <a href="{{ item.url | relative_url }}"{% if item.external %} target="_blank" rel="noopener"{% endif %}>{{ item.link_label }}</a>
+            {% endif %}
+          </div>
+        </li>
+      {% endfor %}
+    </ol>
+  </section>
+
+  <section class="home-research" aria-labelledby="research-landscape-title">
+    <header class="section-heading">
+      <div>
+        <h2 id="research-landscape-title">Scientific Interests</h2>
+      </div>
+    </header>
+    {% include research-constellation.html clusters=site.data.research_interests.clusters %}
+  </section>
+</main>
+
+{{ content }}

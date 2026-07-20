@@ -1,0 +1,56 @@
+{% assign clusters = include.clusters %}
+
+<div class="interactive-constellation interactive-constellation--research" data-interactive-constellation data-default-context="Scientific interests" data-default-title="Explore the research landscape" data-default-description="Hover, focus or select a topic to see how it connects to my scientific interests.">
+  <p class="interactive-constellation__description">A selection of questions, methods and physical systems that shape my research interests.</p>
+
+  <div class="interactive-constellation__layout">
+    <div class="interactive-constellation__map research-constellation" aria-label="Interactive map of scientific interests">
+      <svg class="interactive-constellation__lines" viewBox="0 0 100 100" aria-hidden="true">
+        {% for cluster in clusters %}
+          {% for topic in cluster.topics %}
+            <line class="research-constellation__link" data-context="{{ cluster.id }}" x1="50" y1="52" x2="{{ topic.x }}" y2="{{ topic.y }}"></line>
+          {% endfor %}
+        {% endfor %}
+        <circle class="interactive-constellation__star interactive-constellation__star--one" cx="7" cy="35" r="0.5"></circle>
+        <circle class="interactive-constellation__star interactive-constellation__star--two" cx="19" cy="9" r="0.34"></circle>
+        <circle class="interactive-constellation__star interactive-constellation__star--three" cx="87" cy="10" r="0.44"></circle>
+        <circle class="interactive-constellation__star interactive-constellation__star--four" cx="95" cy="40" r="0.38"></circle>
+        <circle class="interactive-constellation__star interactive-constellation__star--five" cx="6" cy="91" r="0.42"></circle>
+      </svg>
+
+      <div class="interactive-constellation__core" aria-hidden="true">
+        <span>Scientific</span>
+        <strong>Focus</strong>
+      </div>
+
+      {% for cluster in clusters %}
+        {% for topic in cluster.topics %}
+          <button class="interactive-constellation__node research-constellation__node" type="button" data-constellation-node data-node="{{ topic.id }}" data-context="{{ cluster.id }}" data-context-name="{{ cluster.name }}" data-node-name="{{ topic.name }}" data-node-description="{{ topic.description | escape }}" aria-controls="research-constellation-detail" aria-pressed="false" style="--x: {{ topic.x }}%; --y: {{ topic.y }}%;">
+            <span>{{ topic.name }}</span>
+          </button>
+        {% endfor %}
+        <span class="research-constellation__label research-constellation__label--{{ cluster.label_align }}" data-context="{{ cluster.id }}" style="left: {{ cluster.label_x }}%; top: {{ cluster.label_y }}%;">{{ cluster.label }}</span>
+      {% endfor %}
+    </div>
+
+    <aside class="interactive-constellation__detail" id="research-constellation-detail" data-constellation-detail aria-live="polite">
+      <p class="interactive-constellation__detail-eyebrow" data-constellation-detail-context>Scientific interests</p>
+      <h3 data-constellation-detail-title>Explore the research landscape</h3>
+      <p data-constellation-detail-description>Hover, focus or select a topic to see how it connects to my scientific interests.</p>
+      <p class="interactive-constellation__detail-hint">Click or tap a topic to keep it in focus.</p>
+    </aside>
+  </div>
+
+  <div class="interactive-constellation__mobile" aria-label="Scientific interests by category">
+    {% for cluster in clusters %}
+      <section>
+        <h3>{{ cluster.name }}</h3>
+        <div class="interactive-constellation__mobile-nodes">
+          {% for topic in cluster.topics %}
+            <button class="interactive-constellation__mobile-node" type="button" data-constellation-node data-node="{{ topic.id }}" data-context="{{ cluster.id }}" data-context-name="{{ cluster.name }}" data-node-name="{{ topic.name }}" data-node-description="{{ topic.description | escape }}" aria-controls="research-constellation-detail" aria-pressed="false">{{ topic.name }}</button>
+          {% endfor %}
+        </div>
+      </section>
+    {% endfor %}
+  </div>
+</div>

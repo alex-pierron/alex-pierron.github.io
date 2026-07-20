@@ -9,9 +9,9 @@
 # Basic Site Settings
 locale                   : "en-US"
 title                    : "Alex Pierron"
-title_separator          : "–"
+title_separator          : "-"
 name                     : &name "Alex Pierron"
-description              : &description "Alex Pierron is a PhD candidate in Artificial Intelligence at Institut Polytechnique de Paris and the SAMOVAR laboratory, researching efficient, safe and trustworthy Reinforcement Learning methods for 6G networks physical layer."
+description              : &description "Alex Pierron is a PhD candidate in Artificial Intelligence at Institut Polytechnique de Paris and the SAMOVAR laboratory, researching safe reinforcement learning for critical cyber-physical systems and B5G/6G physical-layer security."
 url                      : https://alex-pierron.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "alex-pierron/alex-pierron.github.io"
@@ -24,7 +24,7 @@ author:
   avatar           : "Profile4.png"
   name             : "Alex Pierron"
   pronouns         : # example: "she/her"  
-  bio              : "PhD candidate in Artificial Intelligence — IP Paris / SAMOVAR laboratory"
+  bio              : "PhD candidate in Artificial Intelligence, IP Paris / SAMOVAR laboratory"
   location         : "Palaiseau, France"
   employer         : Institut Polytechnique de Paris
   uri              : # URL

@@ -1,0 +1,40 @@
+{% assign item = include.item %}
+
+<article class="resume-card">
+  <div class="resume-card__topline">
+    <div class="resume-card__identity">
+      {% if item.logos %}
+        <div class="resume-card__logos" aria-hidden="true">
+          {% for logo in item.logos limit:2 %}
+            <img src="{{ logo.src | relative_url }}" alt="">
+          {% endfor %}
+        </div>
+      {% endif %}
+      {% if item.logo_text %}
+        <span class="resume-card__logo-text">{{ item.logo_text }}</span>
+      {% endif %}
+    </div>
+    <div class="resume-card__meta">
+      <span>{{ item.dates }}</span>
+      <span>{{ item.location }}</span>
+    </div>
+  </div>
+
+  <h3>
+    {% if item.link %}
+      <a href="{{ item.link }}" target="_blank" rel="noopener">{{ item.title }}</a>
+    {% else %}
+      {{ item.title }}
+    {% endif %}
+  </h3>
+  <p class="resume-card__institution">{{ item.institution | default: item.organization }}</p>
+  <p class="resume-card__description">{{ item.description }}</p>
+
+  {% if item.tags %}
+    <ul class="tag-list tag-list--compact" aria-label="Topics">
+      {% for tag in item.tags %}
+        <li>{{ tag }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</article>
