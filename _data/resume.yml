@@ -120,7 +120,7 @@ technical_stack:
       label: "Intermediate"
       radius: 45
       label_x: 42
-      label_y: 97
+      label_y: 91
 
 skills:
   - name: "Python"

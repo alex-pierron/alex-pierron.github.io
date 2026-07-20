@@ -349,6 +349,14 @@ $alex-surface-soft: #f6f9fb;
   }
 }
 
+.home-latest .section-heading h2,
+.home-research .section-heading h2,
+.resume-section--education .section-heading h2,
+.resume-section--experience .section-heading h2,
+.resume-section--skills .section-heading h2 {
+  color: $alex-blue;
+}
+
 .timeline {
   position: relative;
   display: grid;
@@ -699,13 +707,13 @@ $alex-surface-soft: #f6f9fb;
   flex: 0 0 auto;
   align-items: center;
   gap: 0.45rem;
-  min-height: 2.5rem;
-  padding: 0.5rem 0.78rem;
+  min-height: 2rem;
+  padding: 0.35rem 0.62rem;
   border: 1px solid $alex-line;
   border-radius: 999px;
   color: $alex-blue-dark;
   background: $alex-surface;
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   font-weight: 750;
   line-height: 1.2;
   text-decoration: none;
@@ -721,6 +729,21 @@ $alex-surface-soft: #f6f9fb;
     border-color: mix(#000, $alex-line, 22%);
     box-shadow: 0 0.5rem 1.1rem rgba(0, 80, 144, 0.08);
     transform: translateY(-1px);
+  }
+}
+
+.theme-toggle {
+  cursor: pointer;
+  font: inherit;
+}
+
+.home-profile-card > div span:last-child {
+  white-space: nowrap;
+}
+
+@media (min-width: $medium-wide) {
+  .home-profile-card {
+    min-width: 18rem;
   }
 }
 
@@ -794,6 +817,65 @@ $alex-surface-soft: #f6f9fb;
 
 .resume-section--skills {
   max-width: 1020px;
+}
+
+@media (min-width: $medium-wide) {
+  .resume-page {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 2rem;
+    row-gap: 3rem;
+    align-items: start;
+  }
+
+  .resume-page__header {
+    grid-column: 1 / -1;
+    max-width: none;
+    margin-bottom: 0;
+  }
+
+  .resume-section {
+    max-width: none;
+    margin-top: 0;
+  }
+
+  .resume-section--education {
+    grid-column: 1;
+    position: relative;
+    padding-right: 1.25rem;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -1rem;
+      width: 1px;
+      height: 100%;
+      background: linear-gradient(180deg, transparent, rgba(0, 80, 144, 0.22) 18%, rgba(0, 80, 144, 0.22) 82%, transparent);
+    }
+  }
+
+  .resume-section--experience {
+    grid-column: 2;
+    padding-left: 1.25rem;
+  }
+
+  .resume-section--featured,
+  .resume-section--skills {
+    grid-column: 1 / -1;
+  }
+
+  .interactive-constellation--orbits .interactive-constellation__layout {
+    align-items: start;
+  }
+
+  .technical-orbits {
+    width: 100%;
+    max-width: 36rem;
+    min-height: 0;
+    aspect-ratio: 1;
+    justify-self: center;
+  }
 }
 
 .interactive-constellation {
@@ -1370,6 +1452,325 @@ $alex-surface-soft: #f6f9fb;
   .interactive-constellation__detail {
     min-height: 0;
     padding: 1rem;
+  }
+}
+
+html[data-theme="light"] {
+  color-scheme: light;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+
+  background: #0d1b2a;
+
+  body,
+  .page,
+  .page__content,
+  .archive,
+  .archive__item,
+  .alex-home,
+  .publications-page,
+  .resume-page {
+    color: #e6eff4;
+  }
+
+  body {
+    background: #0d1b2a;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #e6eff4;
+  }
+
+  a,
+  .text-link,
+  .home-contact-links a,
+  .masthead__menu-item a,
+  .masthead__social-link,
+  .page__footer a {
+    color: #63b9ec;
+  }
+
+  .masthead,
+  .page__footer,
+  .masthead__social-link,
+  .greedy-nav button {
+    background: #13283b;
+    border-color: #2d4a5d;
+  }
+
+  .masthead__social-link:hover,
+  .masthead__social-link:focus,
+  .greedy-nav button:hover,
+  .greedy-nav button:focus {
+    background: #183247;
+    border-color: #42647a;
+  }
+
+  .resume-page__cv {
+    color: #003a66;
+    background: #e8f2f8;
+    border-color: #d8e2ea;
+  }
+
+  .resume-page__cv i {
+    color: #003a66;
+  }
+
+  .resume-page__cv:hover,
+  .resume-page__cv:focus {
+    color: #003a66;
+    background: #ffffff;
+    border-color: #d8e2ea;
+  }
+
+  .home-contact-links a {
+    color: #003a66;
+    background: #e8f2f8;
+    border-color: #d8e2ea;
+  }
+
+  .home-contact-links a i {
+    color: #003a66;
+  }
+
+  .home-contact-links a:hover,
+  .home-contact-links a:focus {
+    color: #003a66;
+    background: #ffffff;
+    border-color: #d8e2ea;
+  }
+
+  .home-focus li,
+  .publication-card__keywords li,
+  .publication-card__links a,
+  .resume-card__logo-text,
+  .publication-card__award {
+    color: #e6eff4;
+    background: #183247;
+    border-color: #2d4a5d;
+  }
+
+  .greedy-nav {
+    background: #13283b;
+  }
+
+  .greedy-nav .hidden-links {
+    background: #13283b;
+    border-color: #2d4a5d;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.28);
+  }
+
+  .greedy-nav .hidden-links a {
+    color: #63b9ec;
+  }
+
+  .greedy-nav .hidden-links li {
+    border-color: #2d4a5d;
+  }
+
+  .greedy-nav .hidden-links::before {
+    border-color: #2d4a5d transparent;
+  }
+
+  .greedy-nav .hidden-links::after {
+    border-color: #13283b transparent;
+  }
+
+  .page__footer,
+  .page__footer p,
+  .page__footer li {
+    color: #a8bac6;
+  }
+
+  .home-intro,
+  .home-latest,
+  .home-research,
+  .publications-page__header,
+  .resume-page__header,
+  .resume-section {
+    color: #e6eff4;
+  }
+
+  .home-intro__copy h1,
+  .publications-page__header h1,
+  .resume-page__header h1,
+  .home-latest .section-heading h2,
+  .home-research .section-heading h2,
+  .resume-section--education .section-heading h2,
+  .resume-section--experience .section-heading h2,
+  .resume-section--skills .section-heading h2 {
+    color: #63b9ec;
+  }
+
+  .home-intro__copy p,
+  .news-item p,
+  .resume-card__description,
+  .publication-card__abstract {
+    color: #e6eff4;
+  }
+
+  .home-eyebrow,
+  .resume-card__meta,
+  .publication-card__venue,
+  .publication-card__details,
+  .publication-card__authors,
+  .publications-page__header p:last-child,
+  .resume-page__header p:last-child,
+  .interactive-constellation__description {
+    color: #a8bac6;
+  }
+
+  .resume-card,
+  .publication-card,
+  .interactive-constellation,
+  .interactive-constellation__detail {
+    background: #13283b;
+    border-color: #2d4a5d;
+    box-shadow: 0 0.75rem 1.8rem rgba(0, 0, 0, 0.2);
+  }
+
+  .resume-card:hover,
+  .publication-card:hover {
+    border-color: #42647a;
+    box-shadow: 0 0.9rem 2rem rgba(0, 0, 0, 0.28);
+  }
+
+  .resume-card h3,
+  .publication-card h3,
+  .interactive-constellation__detail h3,
+  .interactive-constellation__mobile h3 {
+    color: #9bd8f5;
+  }
+
+  .resume-card__institution,
+  .publication-card__links a,
+  .publication-card__award,
+  .resume-card__logo-text {
+    color: #9bd8f5;
+  }
+
+  .resume-card__logo-text,
+  .publication-card__award {
+    background: #183247;
+    border-color: #2d4a5d;
+  }
+
+  .news-item,
+  .section-heading,
+  .home-research {
+    border-color: #2d4a5d;
+  }
+
+  .news-item time,
+  .resume-card__institution {
+    color: #63b9ec;
+  }
+
+  .interactive-constellation {
+    background: linear-gradient(145deg, #13283b 0%, #183247 100%);
+  }
+
+  .interactive-constellation__map {
+    border-color: rgba(99, 185, 236, 0.28);
+    background:
+      radial-gradient(circle at 50% 52%, rgba(99, 185, 236, 0.2) 0, rgba(99, 185, 236, 0.08) 18%, transparent 48%),
+      linear-gradient(145deg, rgba(24, 50, 71, 0.9), rgba(13, 27, 42, 0.96));
+  }
+
+  .interactive-constellation__lines {
+    opacity: 1;
+  }
+
+  .interactive-constellation__star {
+    fill: #9bd8f5;
+    opacity: 0.58;
+  }
+
+  .research-constellation__link,
+  .technical-orbits__ring {
+    stroke: rgba(155, 216, 245, 0.42);
+    stroke-width: 0.36px;
+  }
+
+  .technical-orbits__guide {
+    stroke: rgba(155, 216, 245, 0.34);
+    stroke-width: 0.3px;
+  }
+
+  .research-constellation__label,
+  .technical-orbits__label {
+    color: #e6eff4;
+    background: rgba(24, 50, 71, 0.92);
+    border-color: rgba(155, 216, 245, 0.28);
+  }
+
+  .interactive-constellation__detail [data-constellation-detail-context] {
+    color: #9bd8f5;
+  }
+
+  .interactive-constellation__detail [data-constellation-detail-description] {
+    color: #f4f7fa;
+  }
+
+  .interactive-constellation__detail .interactive-constellation__detail-hint {
+    color: #c4d3dc;
+  }
+
+  .interactive-constellation--research[data-active-context="machine-learning-reinforcement-learning"] .research-constellation__link[data-context="machine-learning-reinforcement-learning"],
+  .interactive-constellation--research[data-active-context="physics-quantum-systems"] .research-constellation__link[data-context="physics-quantum-systems"],
+  .interactive-constellation--research[data-active-context="physical-ai-autonomous-systems"] .research-constellation__link[data-context="physical-ai-autonomous-systems"],
+  .interactive-constellation--orbits[data-active-context="expert"] .technical-orbits__ring[data-context="expert"],
+  .interactive-constellation--orbits[data-active-context="advanced"] .technical-orbits__ring[data-context="advanced"],
+  .interactive-constellation--orbits[data-active-context="intermediate"] .technical-orbits__ring[data-context="intermediate"] {
+    stroke: #9bd8f5;
+    stroke-width: 0.72px;
+  }
+
+  .resume-section--education::after {
+    background: linear-gradient(180deg, transparent, rgba(155, 216, 245, 0.28) 18%, rgba(155, 216, 245, 0.28) 82%, transparent);
+  }
+
+  input,
+  textarea,
+  select,
+  pre,
+  code {
+    color: #e6eff4;
+    background: #13283b;
+    border-color: #2d4a5d;
+  }
+
+  hr,
+  table,
+  th,
+  td {
+    border-color: #2d4a5d;
+  }
+}
+
+@media print {
+  html[data-theme="dark"] {
+    color-scheme: light;
+
+    body,
+    .masthead,
+    .page__footer,
+    .resume-card,
+    .publication-card,
+    .interactive-constellation,
+    .interactive-constellation__detail {
+      color: #23313d;
+      background: #ffffff;
+      border-color: #d8e2ea;
+      box-shadow: none;
+    }
   }
 }
 
