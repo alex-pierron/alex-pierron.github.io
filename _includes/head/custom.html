@@ -2,3 +2,16 @@
 
 <link rel="icon" href="{{ base_path }}/images/favicon.ico">
 <meta name="theme-color" content="#ffffff">
+<script>
+  (function() {
+    try {
+      if (window.localStorage.getItem("alex-theme") === "dark") {
+        document.documentElement.setAttribute("data-theme", "dark");
+        var themeColor = document.querySelector('meta[name="theme-color"]');
+        if (themeColor) {
+          themeColor.setAttribute("content", "#0d1b2a");
+        }
+      }
+    } catch (error) {}
+  }());
+</script>

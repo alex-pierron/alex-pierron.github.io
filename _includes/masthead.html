@@ -20,11 +20,7 @@
       </nav>
     </div>
     <nav class="masthead__social-links" aria-label="Profile links">
-      <a class="masthead__social-link" href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener" title="GitHub">
-        <i class="fab fa-github" aria-hidden="true"></i>
-        <span class="screen-reader-text">GitHub</span>
-      </a>
-      <a class="masthead__social-link" href="mailto:alex.pierron(at)ip-paris(dot)fr" title="Mail">
+      <a class="masthead__social-link mail-link" href="#" data-mail-user="alex.pierron" data-mail-domain="ip-paris.fr" aria-label="Contact by email" title="alex.pierron (at) ip-paris.fr">
         <i class="fas fa-envelope" aria-hidden="true"></i>
         <span class="screen-reader-text">Mail</span>
       </a>
@@ -32,10 +28,18 @@
         <i class="fab fa-linkedin" aria-hidden="true"></i>
         <span class="screen-reader-text">LinkedIn</span>
       </a>
+      <a class="masthead__social-link" href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener" title="GitHub">
+        <i class="fab fa-github" aria-hidden="true"></i>
+        <span class="screen-reader-text">GitHub</span>
+      </a>
       <a class="masthead__social-link" href="{{ '/files/CV_PIERRON.pdf' | relative_url }}" target="_blank" rel="noopener" title="CV">
         <i class="fas fa-file-alt" aria-hidden="true"></i>
         <span class="screen-reader-text">CV</span>
       </a>
+      <button class="masthead__social-link theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Enable night mode" title="Enable night mode">
+        <i class="fas fa-moon" data-theme-icon aria-hidden="true"></i>
+        <span class="screen-reader-text" data-theme-label>Enable night mode</span>
+      </button>
     </nav>
   </div>
 </div>
