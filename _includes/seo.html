@@ -122,6 +122,15 @@
       "url": {{ seo_url | jsonify }},
       "image": {{ site.og_image | prepend: "/images/" | prepend: seo_url | jsonify }},
       "jobTitle": {{ site.social.job_title | jsonify }},
+      "description": {{ site.description | jsonify }},
+      "knowsAbout": [
+        "Reinforcement Learning",
+        "Multi-Agent Reinforcement Learning",
+        "Physical AI",
+        "6G Networks",
+        "Physical-Layer Security",
+        "Cyber-Physical Systems"
+      ],
       "affiliation": [
         {
           "@type": "Organization",

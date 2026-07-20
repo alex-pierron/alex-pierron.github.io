@@ -6,6 +6,7 @@
   venue: "Proceedings of the 25th International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2026)"
   details: "International Foundation for Autonomous Agents and Multiagent Systems"
   date: "May 25-29, 2026"
+  published_date: "2026-05-25"
   location: "Paphos, Cyprus"
   doi: "10.65109/GEMF4800"
   links:
@@ -36,6 +37,7 @@
   venue: "Foundations and Practice of Security - 18th International Symposium, FPS 2025, Revised Selected Papers"
   details: "Lecture Notes in Computer Science, vol. 16403, pp. 83-101, Springer, 2026"
   date: "Nov. 25-27, 2025"
+  published_date: "2025-11-25"
   location: "Brest, France"
   award: "Best Paper Award"
   doi: "10.1007/978-3-032-20026-6_5"

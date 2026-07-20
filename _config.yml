@@ -34,7 +34,7 @@ author:
   arxiv            : # URL - Update with the correct link to your profile
   googlescholar    : #"https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
   impactstory      : # URL
-  orcid            : "https://orcid.org/my-orcid?orcid=0009-0003-2256-1239" #"http://orcid.org/yourorcidurl"
+  orcid            : "https://orcid.org/0009-0003-2256-1239"
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   researchgate     : # URL
 
@@ -96,6 +96,7 @@ social:
   links:
     - "https://github.com/alex-pierron"
     - "https://www.linkedin.com/in/alex-pierron"
+    - "https://orcid.org/0009-0003-2256-1239"
 
 
 # Reading Files
@@ -156,6 +157,10 @@ collections:
 defaults:
   - scope:
       path: "files"
+    values:
+      sitemap: false
+  - scope:
+      path: "google0973b5886a16d321.html"
     values:
       sitemap: false
   # _pages
