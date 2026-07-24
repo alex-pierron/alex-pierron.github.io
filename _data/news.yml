@@ -1,11 +1,11 @@
 - date: "2026-05"
   label: "May 2026"
-  text: "My survey of reinforcement learning for autonomous air combat was published in the AAMAS 2026 proceedings."
+  text: "Our survey of reinforcement learning for autonomous air combat, co-authored with Thibault Lahire, was published in the AAMAS 2026 proceedings !"
   url: "/publications/"
   link_label: "Read the publication"
 
 - date: "2025-11"
   label: "November 2025"
-  text: "Our work on fairness-aware B5G physical-layer security received the Best Paper Award at FPS 2025."
+  text: "Our work on fairness-aware B5G physical-layer security received the Best Paper Award at FPS 2025 !"
   url: "/publications/"
   link_label: "Explore the publication"
