@@ -18,6 +18,11 @@ clusters:
         x: 47
         y: 14
         description: "Coordinated decision-making among multiple interacting agents."
+      - id: "meta-learning"
+        name: "Meta Learning"
+        x: 55
+        y: 29
+        description: "Learning to learn across tasks for rapid adaptation to new environments."
       - id: "safe-reinforcement-learning"
         name: "Safe RL"
         x: 72
